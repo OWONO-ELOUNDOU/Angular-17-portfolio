@@ -1,0 +1,234 @@
+.hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #484848a2 10%, transparent 70%),
+                url(../../../assets/images/background/background.jpg) center no-repeat;
+}
+
+.user {
+    max-width: 400px;
+    min-width: 250px;
+    width: 100%;
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 20px;
+    background: rgba($color: #ddd, $alpha: 0.135);
+    backdrop-filter: blur(10px);
+
+    .user-info {
+        text-align: center;
+        color: #fff;
+
+        h3 {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+
+    .user-profile-pic {
+        width: 300px;
+
+        img {
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    .social-links {
+        width: 85%;
+        padding: 10px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        background-color: #fff;
+        border-radius: 30px;
+
+        img {
+            cursor: pointer;
+        }
+
+        svg {
+            width: 22px;
+        }
+    }
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    padding: 30px 3%;
+    color: #c1e8ff;
+    border-bottom: 2px solid #c1e8ff;
+    border-bottom-style: dashed;
+    background-color: #021024;
+}
+section:last-child {
+    border: none;
+}
+
+.title {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    position: relative;
+}
+.subtitle {
+    font-size: 25px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.title::before {
+    content: '';
+    width: 75px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    background-color: #c1e8ff;
+}
+.subtitle::before {
+    content: '';
+    width: 75px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    top: 35px;
+    border-radius: 30px;
+    background-color: #c1e8ff;
+}
+
+.about {
+
+    .about-col {
+        width: 100%;
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        gap: 50px;
+        flex-wrap: wrap;
+
+        .profile-image {
+            max-width: 500px;
+            min-width: 250px;
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .profile-info {
+            max-width: 600px;
+            min-width: 250px;
+            width: 100%;
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            flex-direction: column;
+            gap: 40px;
+        }
+    }
+}
+
+.services {
+    height: 100%;
+
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+        padding: 50px 0;
+
+        .service {
+            max-width: 400px;
+            min-width: 250px;
+            width: 100%;
+            padding: 30px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 15px;
+            border: 1px dashed #c1e8ff;
+            border-radius: 7px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            svg {
+                width: 35px;
+                stroke: #c1e8ff;
+                fill: #c1e8ff;
+            }
+
+            span {
+                font-size: 18px;
+            }
+        }
+
+        .service:hover {
+            border-style: solid;
+            transform: scale(1.05);
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .about {
+        height: 100%;
+        padding: 20px;
+
+        .about-col {
+            .profile-image {
+                width: 100%;
+
+                img {
+                    border-radius: 7px;
+                }
+            }
+
+            .profile-info {
+
+                div {
+                    width: 100%;
+                    
+                    p {
+                        text-wrap: balance;
+                    }
+                }
+            }
+        }
+    }
+
+    .services {
+        padding: 20px;
+
+        .row {
+            .service {
+                width: 100%;
+            }
+        }
+    }
+}
